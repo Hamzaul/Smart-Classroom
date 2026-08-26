@@ -1,0 +1,33 @@
+Flask==3.0.3
+flask-cors==4.0.1
+python-dotenv==1.0.1
+opencv-python==4.10.0.84
+mediapipe==0.10.14
+# mediapipe==0.10.14 requires protobuf>=4.25.3,<5 (see its own setup.py).
+# Without this explicit pin, pip's resolver can satisfy firebase-admin's
+# looser transitive protobuf constraint (via google-cloud-firestore, which
+# now permits protobuf up to 6.x) by installing protobuf 5.x/6.x instead —
+# mediapipe 0.10.14 still calls the legacy
+# `calculator_options.DESCRIPTOR.fields_by_name[...].label` attribute
+# internally, which newer protobuf runtimes (upb-backed) no longer expose
+# the same way, producing:
+#   AttributeError: 'google._upb._message.FieldDescriptor' object has no
+#   attribute 'label'
+# Pinning protobuf here forces pip to resolve a version both packages
+# actually support, so the conflict is caught at install time (a normal
+# pip dependency-conflict error) instead of at runtime as an opaque crash.
+protobuf==4.25.3
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.5.1
+face-recognition==1.3.0
+dlib==19.24.4
+firebase-admin==6.5.0
+requests==2.32.3
+Pillow==10.4.0
+pyserial==3.5
+eventlet==0.36.1
+gunicorn==22.0.0
+reportlab==4.2.2
+pytest==8.3.2
+pytest-mock==3.14.0

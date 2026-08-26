@@ -1,0 +1,83 @@
+{
+  
+  "weights": {
+    "eye_aspect_ratio": 0.2222,
+    "blink_rate": 0.1111,
+    "head_pose": 0.2222,
+    "face_presence": 0.1667,
+    "sleep_duration": 0.1667,
+    "yawn_count": 0.1111
+  },
+  "thresholds": {
+    "ear_closed_threshold": 0.21,
+    "ear_reopen_threshold": 0.23,
+    "ear_drowsy_threshold": 0.25,
+    "blink_rate_normal_min": 10,
+    "blink_rate_normal_max": 25,
+    "head_pose_yaw_max_deg": 25,
+    "head_pose_pitch_max_deg": 20,
+    "sleep_duration_alert_seconds": 3,
+    "yawn_count_alert_per_minute": 3,
+    "face_absence_penalty_per_second": 5
+  },
+  "detection": {
+    "min_detection_confidence": 0.6,
+    "model_selection": 1,
+    "min_face_width_px": 40,
+    "min_face_height_px": 40
+  },
+  "recognition": {
+    "match_tolerance": 0.5
+  },
+  "head_pose_smoothing": {
+    "smoothing_alpha": 0.4,
+    "consecutive_frames_required": 3,
+    "max_reprojection_error_px": 15,
+    "min_pose_confidence": 0.15
+  },
+  "monitoring": {
+    "frame_interval_ms": 1500,
+    "stale_student_seconds": 8,
+    "alert_cooldown_seconds": 60,
+    "low_attention_threshold": 40
+  },
+  "emotion_scores": {
+    "happy": 100,
+    "neutral": 80,
+    "surprise": 75,
+    "focused": 100,
+    "sad": 40,
+    "bored": 30,
+    "angry": 25,
+    "fear": 35,
+    "disgust": 20,
+    "sleepy": 10,
+    "unknown": 60
+  },
+  "attention_levels": {
+    "excellent": {
+      "min": 80,
+      "max": 100
+    },
+    "high": {
+      "min": 60,
+      "max": 79
+    },
+    "medium": {
+      "min": 40,
+      "max": 59
+    },
+    "low": {
+      "min": 20,
+      "max": 39
+    },
+    "very_low": {
+      "min": 0,
+      "max": 19
+    }
+  },
+  "history": {
+    "rolling_window_size": 30,
+    "smoothing_alpha": 0.3
+  }
+}

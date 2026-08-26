@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-base-950 text-slate-200 font-body antialiased;
+    background-image:
+      radial-gradient(circle at 15% 0%, rgba(124, 92, 252, 0.10), transparent 40%),
+      radial-gradient(circle at 85% 15%, rgba(56, 189, 248, 0.08), transparent 35%);
+    background-attachment: fixed;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-base-700 rounded-full;
+  }
+  :focus-visible {
+    outline: 2px solid theme("colors.violet.400");
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-base-800/60 border border-white/[0.06] backdrop-blur-xl rounded-xl2 shadow-glass;
+  }
+  .glass-card {
+    @apply bg-base-800/50 border border-white/[0.06] backdrop-blur-lg rounded-xl shadow-glass;
+  }
+  .stat-pill {
+    @apply flex items-center gap-3 glass-card px-4 py-3;
+  }
+  .nav-item {
+    @apply flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm font-medium text-slate-400 transition-colors duration-150 hover:bg-white/5 hover:text-slate-100 cursor-pointer;
+  }
+  .nav-item-active {
+    @apply bg-violet-500/15 text-violet-300 shadow-[inset_0_0_0_1px_rgba(124,92,252,0.35)];
+  }
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded-md text-xs font-semibold;
+  }
+  .badge-excellent {
+    @apply bg-accent-green/15 text-accent-green;
+  }
+  .badge-high {
+    @apply bg-accent-blue/15 text-accent-blue;
+  }
+  .badge-medium {
+    @apply bg-accent-amber/15 text-accent-amber;
+  }
+  .badge-low {
+    @apply bg-accent-orange/15 text-accent-orange;
+  }
+  .badge-very_low {
+    @apply bg-accent-red/15 text-accent-red;
+  }
+}

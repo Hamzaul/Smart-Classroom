@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+*.egg-info/
+.pytest_cache/
+
+# Node / frontend
+node_modules/
+dist/
+.vite/
+
+# Environment / secrets — never commit real credentials
+.env
+backend/config/firebase_credentials.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Runtime-generated data — never committed, safe to delete
+backend/backups/
+backend/reports_output/
+
+# Build/render artifacts from doc & deck generation
+research_paper/*.pdf
+research_paper/page-*.jpg
+research_paper/presentation/*.pdf
+research_paper/presentation/slide-*.jpg
