@@ -46,7 +46,7 @@ export default function RecentAlertsPanel({ alerts = [] }) {
                   <Icon size={14} style={{ color }} />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm text-slate-180 truncate">
+                  <p className="text-sm text-slate-200 truncate">
                     {a.message}
                   </p>
                 </div>
