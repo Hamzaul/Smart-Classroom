@@ -25,7 +25,7 @@ export default function AttentionDistributionChart({ counts = {} }) {
           backgroundColor: LEVELS.map((l) => l.color),
           borderColor: "#161A2E",
           borderWidth: 3,
-          hoverOffset: 6,
+          hoveroffset: 5,
         },
       ],
     }),
