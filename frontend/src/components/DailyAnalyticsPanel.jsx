@@ -30,7 +30,7 @@ export default function DailyAnalyticsPanel({ days = [], summary = {}, available
           type: "bar",
           label: "Average Attention (%)",
           data: days.map((d) => d.avgAttention),
-          backgroundColor: "rgba(154,144,255,0.55)",
+          backgroundColor: "rgba(155,140,255,0.55)",
           borderRadius: 4,
           yAxisID: "y",
           order: 2,
